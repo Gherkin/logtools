@@ -185,7 +185,7 @@ public:
 	~FILELogSink() override;
 
 	//not assignable
-	FileLogSink& operator=(const FileLogSink& rhs) =delete;
+	FILELogSink& operator=(const FILELogSink& rhs) =delete;
 
 	void Log(Severity severity, const std::string &msg) override;
 	void Log(Severity severity, const char *format, va_list va) override;
