@@ -2,7 +2,7 @@
 *                                                                                                                      *
 * logtools                                                                                                             *
 *                                                                                                                      *
-* Copyright (c) 2016-2025 Andrew D. Zonenberg and contributors                                                         *
+* Copyright (c) 2016-2026 Andrew D. Zonenberg and contributors                                                         *
 * All rights reserved.                                                                                                 *
 *                                                                                                                      *
 * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the     *
@@ -122,7 +122,7 @@ public:
 
 protected:
 
-	std::string WrapString(std::string str);
+	std::string WrapString(const std::string& str);
 	virtual void PreprocessLine(std::string& line);
 
 	/// @brief Number of spaces in one indentation
@@ -171,7 +171,7 @@ protected:
 		const std::string& search,
 		const std::string& before,
 		const std::string& after,
-		std::string subject);
+		const std::string& subject);
 };
 
 /**
