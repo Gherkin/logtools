@@ -88,7 +88,7 @@ void ColoredSTDLogSink::PreprocessLine(std::string& line)
 	};
 
 	//Bold yellow warnings. If there's a colon after the message, do that too
-	for(auto s : yellow_strings)
+	for(auto& s : yellow_strings)
 	{
 		line = replace(s + ":", yellow, clear, line);
 		//line = replace(s, yellow + s + clear, line);
