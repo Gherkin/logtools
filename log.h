@@ -184,7 +184,8 @@ public:
 	FILELogSink(FILE *f, bool line_buffered = false, Severity min_severity = Severity::VERBOSE);
 	~FILELogSink() override;
 
-	//not assignable
+	//not copyable or assignable
+	FILELogSink(const FILELogSink& rhs) =delete;
 	FILELogSink& operator=(const FILELogSink& rhs) =delete;
 
 	void Log(Severity severity, const std::string &msg) override;
